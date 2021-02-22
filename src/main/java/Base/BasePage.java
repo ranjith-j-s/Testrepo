@@ -22,16 +22,6 @@ public class BasePage extends EmailableReporter2 {
         driver = new ChromeDriver();
     }
 
-    @BeforeMethod
-    public void beforeMethod(final Method method, final Object[] testData, final ITestContext ctx) {
-        ThreadLocal<String> testName = new ThreadLocal<>();
-        if (testData.length > 0) {
-            testName.set(method.getName() + "_" + testData[0]);
-            ctx.setAttribute("testName", testName.get());
-        } else ctx.setAttribute("testName", method.getName());
-                method.getName();
-    }
-
 //    @AfterSuite
 //    public void closeBrowser() {
 //        driver.close();
