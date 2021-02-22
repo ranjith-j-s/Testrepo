@@ -3,6 +3,7 @@ package Scenario1.pageobject;
 import Base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,14 +16,16 @@ public class Ecom_login_pageobject{
         PageFactory.initElements(BasePage.getDriver(), this);
     }
 
-    By cross = By.xpath("//button[.='✕']");
+//    By cross = By.xpath("//button[.='✕']"); can be used but ignore
 
-//    @FindBy(xpath = "//button[.='✕']")
-//    public String cross;
+    @FindBy(xpath = "//button[.='✕']")
+    public WebElement cross;
 
     public void flipkart_login(WebDriver driver) throws InterruptedException {
         System.out.println(cross);
         Thread.sleep(5000);
-        driver.findElement(cross).click();
+//        driver.findElement(cross).click();ca be used but ignore
+        cross.click();
+
     }
 }
