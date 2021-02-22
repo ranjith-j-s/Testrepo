@@ -24,7 +24,7 @@ public class Ecom_login_pageobject{
     public void flipkart_login(WebDriver driver) throws InterruptedException {
         System.out.println(cross);
         Thread.sleep(5000);
-//        driver.findElement(cross).click();ca be used but ignore
+//        driver.findElement(cross).click();can be used but ignore
         cross.click();
 
     }
